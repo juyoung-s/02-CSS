@@ -1,0 +1,25 @@
+.wrap{
+    width:800px;
+    border:10px solid hotpink;
+    display:flex;
+}
+.wrap>div{
+    width:100px;
+    height:150px;
+}
+/* flex-grow는 기본이 0 */
+.wrap>.box1{
+    background:plum;
+    flex-grow:1;
+}
+.wrap>.box2{
+    background:blueviolet;
+    flex-grow:1;
+}
+.wrap>.box3{
+    background:aquamarine;
+}
+.wrap>.box4{
+    background:rgb(239, 255, 181);
+    flex-grow:2;
+}

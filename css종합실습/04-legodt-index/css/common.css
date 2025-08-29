@@ -1,0 +1,52 @@
+/* 공통사항 */
+/* 모든 여백 제거 */
+/* 테두리와 여백이 포함돈 크기가
+width와 height에 포함되도록 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* li 장식 제거 */
+li {
+    list-style: none;
+}
+
+/* a 밑줄제거 글자색변경 */
+a {
+    text-decoration: none;
+    /* color:#222 */
+    /* 부모의 컬러속성을 상속받아서 사용하겠다 */
+    color: inherit;
+}
+
+/* img, vided 위아래 정렬 */
+img,
+video {
+    vertical-align: middle;
+}
+
+/* em,i,address 글자를 똑바로 */
+em,
+i,
+address {
+    font-style: normal;
+}
+
+/* blind */
+/* 제목 썼지만 화면에는 안 보이게 하기 */
+.blind {
+    position: absolute;
+    top: -99999px;
+}
+
+/* button도 링크 기능 있다고 표시하기 */
+button{
+    cursor:pointer;
+}
+
+/* body */
+body {
+    color: #222;
+}

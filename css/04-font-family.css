@@ -1,0 +1,15 @@
+/* h1을 선택하여 글씨체를 궁서체 */
+h1{
+    font-family:"궁서",serif;
+}
+
+/* .text1을 선택하여 굴림 */
+.text1{
+    font-family:"굴림";
+}
+.text2{
+    font-family:Subway;
+}
+.text3{
+    font-family: "Playwrite PL", cursive;
+}

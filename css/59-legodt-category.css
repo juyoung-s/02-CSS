@@ -1,0 +1,55 @@
+/* 공통사항 */
+*{
+    margin:0;
+    padding:0
+}
+
+a{
+    text-decoration:none;
+    color:#1a1a1a;
+}
+
+img{
+    vertical-align:middle;
+}
+
+.category-wrap{
+    max-width:1680px;
+    background-color:rgba(25,0,0,0.2);
+    margin: 0 auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:52px;
+    font-weight:800;
+    color:#ef4da2;
+    margin-bottom:80px;
+}
+
+.category-list{
+    display:flex;
+    gap:40px;
+}
+.category-list>a{
+    /* 똑같은 비율로 들어가게 하기 */
+    flex:1;
+}
+.category-list>a>.img-box{
+    border-radius:24px;
+    overflow:hidden;
+    background-color:aquamarine;
+}
+.category-list>a>.img-box>img{
+    width:100%;
+}
+
+.category-list>a:hover>.img-box>img{
+    width:110%;
+}
+.category-list>a>.text-box{
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+    margin-top:24px;
+}

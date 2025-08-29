@@ -1,0 +1,20 @@
+.sns-list>li>a{
+    /* width,height,text-indent는
+    블럭에만 줄 수 있는 명령어 */
+    display:block;
+    width:50px;
+    height:50px;
+    background-color:rgb(170, 225, 247);
+    text-indent:-9999px;
+}
+
+.sns-list>li>a:hover{
+    background-position:-50px 0;
+}
+
+.sns-list>.sns1>a{
+    background-image:url(../images/icon_sns_facebook.png);
+}
+.sns-list>.sns2>a{
+    background-image:url(../images/icon_sns_instar.png);
+}

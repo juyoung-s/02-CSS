@@ -1,0 +1,164 @@
+:root {
+    --main-color: #ef4da2;
+    --secondary-color: #b59274;
+    --font-base-color: #1a1a1a;
+    --font-secondary-color: #9a9a9a;
+    --font-del-color: #d3d3d3;
+    --section-title-size: 6rem;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Outfit", "Suit", sans-serif;
+    font-size: 1.6rem;
+    color: var(--font-base-color);
+}
+
+.wide-inner {
+    margin: 0 2.5%;
+    background: rgba(255, 0, 0, 0.2);
+    /* 얘를 기준으로 메뉴가 왼쪽 끝에 붙어있도록 */
+    position: relative;
+}
+
+.inner {
+    max-width: 1680px;
+    margin: 0 auto;
+    background: rgba(0, 0, 255, 0.2);
+}
+
+/* header */
+header {
+    background: var(--main-color);
+    height: 7rem;
+    /* 아래로 스크롤해도 header 계속 보이도록 */
+    position:fixed;
+    /* position:fixed 쓰면 너비가 줄어드므로 사이즈 필요 */
+    width:100%;
+}
+
+.logo {
+    /* 로고 가운데로 보내기 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    /* 위에 2개하면 로고가 정확희 위아래 가운데로 감 */
+
+    /* 불필요한 공간없이 로고를 위에 딱 붙이기 */
+    img {
+        display: block;
+    }
+}
+
+.header-left {
+    /* logo영역 위로 올라오게 하기 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    /* 햄버거 가운데로 */
+    align-items: center;
+    gap: 3rem;
+}
+
+.main-menu {
+    display: flex;
+    gap: 2.4rem;
+
+    /* 서브메뉴는 스타일 좀 다르니까
+    a에 얘네 주기 */
+    >li {
+        background-color: palegreen;
+        position: relative;
+
+        >a {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 7rem;
+            color: #fff;
+        }
+    }
+}
+
+/* 서브메뉴 배경 만들기 */
+.main-menu::before{
+    content:"";
+    display:block;
+    width:100%;
+    height:0;
+    background:blueviolet;
+    position:fixed;
+    left:0;
+    top:70px;
+    transition:0.5s;
+}
+.main-menu:hover::before{
+    /* hover하면 높이가 0이었다가 120으로 늘어남 */
+    height:120px;
+}
+
+/* 서브메뉴를 1개씩 볼 때 */
+/* .main-menu>li:hover .depth1 {
+    display: block;
+} */
+
+/* 서브메뉴를 전부 볼 때 */
+.main-menu:hover .depth1{
+    /* display:block; */
+    height:120px;
+}
+
+/* 서브메뉴의 배경이 100%인 경우 header fixed일 때 사용할 것 */
+
+.depth1 {
+    /* 메인메뉴할 때 복잡하니까 depth1 숨겨놓기 */
+    /* display: none; */
+    background: skyblue;
+    /* depth1 텍스트길이가 길면 메인메뉴 영역도 늘어나버리므로
+    이걸 막기 위해 */
+    /* 얘의 부모는 메인메뉴의 li */
+    position: absolute;
+    /* border: 1px solid black; */
+    left: 50%;
+    transform: translateX(-50%);
+    /* 아래3개: 글씨도 스르륵 나오게하기 */
+    height:0;
+    overflow:hidden;
+    transition:0.5s;
+}
+
+/* 팀플 lang-btn에서 필요한거 */
+.header-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height:7rem;
+    gap:3rem;
+}
+
+.header-right ul {
+    display: flex;
+    gap:2.4rem;
+}
+
+
+
+
+
+/* main */
+
+/* footer */
+
+
+
+
+
+/* ipad */
+
+/* mobile */

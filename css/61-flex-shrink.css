@@ -1,0 +1,25 @@
+.wrap{
+    width:600px;
+    border:10px solid hotpink;
+    display:flex;
+}
+.wrap>div{
+    width:250px;
+    height:150px;
+}
+/* flex-shrink는 기본값이 1
+적용 안 하고 싶으면 0 */
+.wrap>.box1{
+    background:plum;
+}
+.wrap>.box2{
+    background:blueviolet; 
+}
+.wrap>.box3{
+    background:aqua;
+    flex-shrink:0;
+}
+.wrap>.box4{
+    background:aquamarine;
+    flex-shrink:2;
+}

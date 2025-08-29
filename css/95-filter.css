@@ -1,0 +1,49 @@
+img {
+    width: 300px;
+}
+
+.filter2 {
+    /* 이미지를 흐릿하게 만들 때
+    값이 클수록 더 흐림 */
+    filter: blur(10px);
+}
+
+.filter3 {
+    /* 이미지를 밝게 (또는 어둡게)
+    0~100% 100% 기본 0% 어둡게
+    100%보다 크면 밝아짐 */
+    filter: brightness(200%)
+}
+
+.filter4 {
+    /* 대비값 조절 
+    선명도 낮게 회색되면서 흐려짐
+    높게 색상이 선명하고 진하게 */
+    filter: contrast(50%);
+}
+
+.filter5 {
+    /* 흑백으로 채도조절 
+    0% 기본 ~100% 회색에 가깝게*/
+    filter:grayscale(100%);
+}
+
+.filter6{
+    /* 색상반전 0기본 ~100% */
+    filter:invert(100%);
+}
+
+.filter7{
+    /* 채도 0% 채도없음 100% 기본
+    100% 초과 채도 높아짐 */
+    filter:saturate(200%);
+}
+
+.filter8{
+    /* 세피아톤 0%기본 ~100% */
+    filter:sepia(100%);
+}
+
+.filter9{
+    filter: sepia(100%) blur(3px);
+}

@@ -1,0 +1,28 @@
+.wrap {
+    width: 600px;
+    background: pink;
+    margin: 0 auto;
+
+    >div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+
+    >.box1{
+        background:skyblue;
+        position:relative;
+        left:50px;
+        right:50px;
+    }
+    >.box2{
+        background:aqua;
+        position:relative;
+        left:30px;
+        bottom:30px;
+    }
+    >.box3{
+        background:aquamarine;
+    }
+}
+

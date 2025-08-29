@@ -1,0 +1,42 @@
+li{
+    list-style:none;
+}
+.slider-text{
+    width:840px;
+    height:780px;
+    background:#34aac2;
+    border-radius:0 0 30px;
+    text-align:center;
+}
+.slider-text>h2{
+    font-size:60px;
+    color:white;
+}
+.slider-text>p{
+    font-size:20px;
+    color:white;
+}
+/* a 속의 글자는 무조건 a에게 줘야 변함 */
+.slider-text>.more-btn>a{
+    display:block;
+    width:200px;
+    height:50px;
+    line-height:50px;
+    text-decoration:none;
+    color:#1a1a1a;
+    background:#fff;
+    border-radius:30px;
+}
+
+.pager-btn>li>a{
+    display:block;
+    width:16px;
+    height:16px;
+    background:rgba(255,255,255,0.5);
+    border-radius:16px;
+}
+
+.pager-btn>li>.active{
+    width:50px;
+    background:rgba(255,255,255,1);
+}

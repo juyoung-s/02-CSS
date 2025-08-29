@@ -1,0 +1,58 @@
+/* 너비70 높이70
+display:block; */
+/* .q1>a{
+    display:block;
+    width:70px;
+    height:70px;
+    background-color:hotpink;
+    background-image:url(../images/icon_quickmenu.png);
+    background-position:0 0;
+}
+.q2>a{
+    display:block;
+    width:70px;
+    height:70px;
+    background-color:aqua;
+    background-image:url(../images/icon_quickmenu.png);
+    background-position:-72px 0;
+}
+.q3>a{
+    display:block;
+    width:70px;
+    height:70px;
+    background-color:blue;
+    background-image:url(../images/icon_quickmenu.png);
+    background-position:-141px 0;
+}
+.q4>a{
+    display:block;
+    width:70px;
+    height:70px;
+    background-color:blueviolet;
+    background-image:url(../images/icon_quickmenu.png);
+    background-position:-210px 0;
+} */
+
+/* 더 간단한 방법 */
+.quick-list>li>a{
+    display:block;
+    width:70px;
+    height:70px;
+    background-color:pink;
+    background-image:url(../images/icon_quickmenu.png);
+}
+.quick-list>.q1>a{
+    background-position: 0 0;
+}
+
+.quick-list>.q2>a{
+    background-position:-72px 0;
+}
+
+.quick-list>.q3>a{
+    background-position:-141px 0;
+}
+
+.quick-list>.q4>a{
+    background-position:-210px 0;
+}

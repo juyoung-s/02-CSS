@@ -1,0 +1,43 @@
+/* 공통사항 */
+/* 모든여백제거 */
+*{
+    margin:0;
+    padding:0;
+}
+/* list앞 장식제거 */
+
+/* .menu>li를 옆으로 붙이기 */
+.menu>li{
+    display:inline;
+    border:1px solid palevioletred;
+    width:100px;   
+}
+
+/* .span-list>span 줄을 변경하고 
+너비,높이,테두리 */
+.span-list>span{
+    width:200px;
+    height:50px;
+    border:1px solid;
+    display:block;
+}
+
+/* .in-block은 너비,높이,옆으로 */
+.in-block>li{
+    width:100px;
+    height:50px;
+    border:1px solid;
+    display:inline-block;
+    line-height:50px;
+}
+
+/* .table>li */
+.table>li{
+    border:1px solid aqua;
+    width:200px;
+    height:150px;
+    display:table-cell;
+    text-align:center;
+    line-height:150px;
+    vertical-align:middle;
+}

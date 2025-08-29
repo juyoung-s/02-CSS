@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            width: 80px;
+            height: 40px;
+            background: #ddd;
+            border-radius: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn>img {
+            transition: 0.3s;
+        }
+
+        .btn:hover img {
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>transition button</h1>
+
+    <div class="btn">
+        <img src="./images/iconmonstr-arrow-right-thin.svg" alt="">
+    </div>
+</body>
+
+</html>

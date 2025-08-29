@@ -1,0 +1,60 @@
+/* 공통 
+모든 요소에서 바깥여백, 안쪽여백 제거 */
+*{
+    margin:0;
+    padding:0;
+}
+
+/* a 밑줄제거, 글자색 */
+a{
+    text-decoration:none;
+    color:#1a1a1a;
+}
+
+/* .best wrap 배경색 */
+.best-wrap{
+    background:#f5f5f5;
+}
+
+/* 레이아웃 화면의 가운데 들어가도록
+바깥좌우 여백을 같은 값으로 주면 
+가운데로 들어간다 */
+.inner {
+    /* 너비값 필수 */
+    width:1680px;
+    margin:0 auto;
+    background:pink;
+}
+
+.title{
+    font-size:36px;
+    color:#1a1a1a;
+    text-align:center;
+    padding:160px 0 80px;
+}
+
+.best-list>div{
+    width:328px;
+    background:palegreen;
+}
+
+/* 부모조상 먼저 쓰고 자식 쓰기 */
+.best-list>div>.best-img{
+    background:#fff;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+.best-list>div>.best-img>img{
+    width:100%;
+}
+
+/* 글자 */
+/* 제목아래 여백 */
+/* 가격아래 여백 */
+.best-list>div>.best-text .best-price{
+    margin:8px 0 16px;
+}
+.best-list>div>.best-text .best-price del{
+    font-size:14px;
+    color:#888;
+}

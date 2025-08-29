@@ -1,0 +1,307 @@
+:root {
+    --main-color: #ef4da2;
+}
+
+html {
+    font-size: 10px;
+}
+
+.inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: rgba(255, 0, 0, 0.1);
+    position: relative;
+}
+
+.section-title {
+    font-size: 6rem;
+}
+
+.new-in-wrap {
+    background: rgb(141, 182, 243);
+    padding: 10rem 0;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.new-in-wrap .new-in {
+    /* shop-now-btn을 텍스트 길이에 맞추기 */
+    display: flex;
+}
+
+.new-in-wrap .title-box .section-title {
+    color: #01a799;
+}
+
+.new-in-wrap .title-box .sub-title {
+    font-size: 3.6rem;
+    font-weight: 800;
+}
+
+.new-in-wrap .title-box .outline-title {
+    font-size: 10rem;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+
+.new-in-wrap .new-item-img {
+    position: absolute;
+    width: 47%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    img {
+        width: 100%;
+    }
+}
+
+.new-in-wrap .item-title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin: 7rem 0 2rem;
+}
+
+.new-in-wrap .shop-now-btn>a {
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    text-align: center;
+    padding: 1.6rem 0;
+    margin: 50px 0 0;
+}
+
+.new-in-wrap .shop-now-btn>a p {
+    /* border:1px solid black; */
+    overflow: hidden;
+}
+
+.new-in-wrap .shop-now-btn>a span {
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.new-in-wrap .shop-now-btn>a span::after {
+    content: "Shop Now";
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.new-in-wrap .shop-now-btn>a:hover span {
+    transform: translateY(-100%);
+}
+
+.arrow-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.arrow-list>li>a {
+    background: #ccc;
+    display: flex;
+    padding: 8px 30px;
+    border-radius: 50px;
+}
+
+.arrow-list>li>a img {
+    /* 아이콘 너무 크면 줄이기 */
+    width: 40px;
+    height: 38px;
+    transition: 0.3s;
+}
+
+.arrow-list>li:first-child>a:hover img {
+    transform: translateX(-10px);
+}
+
+.arrow-list>li:last-child>a:hover img {
+    transform: translateX(10px);
+}
+
+
+/* summer */
+.summer-wrap {
+    padding: 10rem 0;
+    font-size: 1.6rem;
+}
+
+.summer-wrap .section-title {
+    text-align: center;
+    color: var(--main-color);
+}
+
+.summer-wrap .summer-tab-title {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin: 3rem 0 5rem;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #777;
+}
+
+.summer-tab-title .active {
+    position: relative;
+    color: var(--main-color);
+}
+
+.summer-tab-title .active::after {
+    content: "";
+    /* 인라인이니까 block으로 만들기 */
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -6px;
+}
+
+.sunshade-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.sunshade-list>.sunshade-item {}
+
+.sunshade-list>.sunshade-item>.img-box {
+    position: relative;
+    background: #fff;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.sunshade-list .sunshade-item .wish-icon {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    width: 32px;
+    height: 32px;
+    background: url(../images/heart-gray.png);
+    /* hover-img보다 wish-icon이 위로 뜨게 하기 */
+    z-index: 10;
+}
+
+/* .wish-icon.wish-check 붙여쓰기 */
+.sunshade-list .sunshade-item .wish-icon.wish-check {
+    background: url(../images/heart-pink.png);
+}
+
+.sunshade-list>.sunshade-item img {
+    width: 100%;
+}
+
+.sunshade-list>.sunshade-item .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    /* 이미지 더 자연스럽게 뜨게 하기 */
+    transition: 0.3s;
+}
+
+/* 제품 hover하면 모델사진 뜨게 하기 */
+.sunshade-list .sunshade-item:hover .hover-img {
+    opacity: 1;
+}
+
+.sunshade-item .text-box {
+    padding: 3rem 2rem;
+}
+
+.sunshade-item .text-box .price-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.sunshade-item .text-box .price-wrap p>span {
+    color: #777;
+    text-decoration: line-through;
+}
+
+.sunshade-item .text-box .price-wrap .sale {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.sunshade-item .text-box .cart-btn {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.arrow-list.summer-arrow>li:last-child>a {
+    background: var(--main-color);
+}
+
+
+
+/* 반응형 */
+/* 1024 이하 
+기본글자크기 8px
+.new-in-wrap 그림이 중간으로
+좌우화살표가 오른쪽 아래로 */
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 8px;
+    }
+
+    .new-in-wrap .new-item-img {
+        /* position:absolute 취소하기 */
+        position: static;
+        transform: translateY(0);
+    }
+
+    .new-in-wrap .inner {
+        display: flex;
+        gap: 100px;
+        align-items: flex-end;
+    }
+
+    .sunshade-list {
+        /* 100% * 자식의 개수 / 보고싶은 개수 */
+        width: calc(100% * 4 / 1.7);
+    }
+}
+
+@media screen and (max-width:767px) {
+    .section-title{
+        font: size 4rem;
+    }
+
+    .new-in-wrap .inner {
+        gap: 5rem;
+    }
+
+    .new-in-wrap .title-box .outline-title {
+        font-size: 5rem;
+    }
+
+    .new-in-wrap .shop-now-btn>a{
+        padding:1rem 4rem;
+        display:inline-block;
+    }
+
+    .summer-wrap .summer-tab-title {
+        font-size: 1.5rem;
+        gap: 2rem;
+    }
+
+    .arrow-list{
+        position:absolute;
+        right:20px;
+    }
+
+    .arrow-list.summer-arrow{
+        display:none;
+    }
+}

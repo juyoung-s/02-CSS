@@ -1,0 +1,12 @@
+address{
+    font-style:normal;
+}
+
+/* 자식선택자 */
+/* 부모선택자>자식선택자 */
+div>em{
+    font-style:normal;
+}
+div>i{
+    font-style:normal;
+}

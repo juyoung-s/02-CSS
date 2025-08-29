@@ -1,0 +1,18 @@
+.box1{
+    background:pink;
+    width:600px;
+    height:150px;
+}
+.box2{
+    background:purple;
+    /* %는 부모가 기준 */
+    width:50%;
+    height:200px;
+}
+
+span{
+    /* img가 아닌 인라인은 너비 높이 가질 수 없다 */
+    background:aqua;
+    width:600px;
+    height:100px;
+}

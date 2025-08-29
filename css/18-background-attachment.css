@@ -1,0 +1,13 @@
+/* 모든 div는 높이가 500px */
+div{
+    height:500px;
+    background-color:white;
+}
+.title{
+    font-size:60px;
+}
+
+.section2{
+    background-image:url(../images/250700_캠핑기획전_메인상단배너_PC.jpg);
+    background-attachment:fixed;
+}

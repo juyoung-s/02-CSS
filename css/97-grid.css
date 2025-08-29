@@ -1,0 +1,39 @@
+.wrap {
+    background-color: skyblue;
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+.wrap>div {
+    border: 1px solid black;
+    background: pink;
+}
+
+/* .flexwrap */
+.flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    /* gap:50px; */
+    row-gap:30px;
+}
+
+.flexwrap>div {
+    width: 250px;
+}
+
+/* .gridwrap */
+.gridwrap{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    /* 사이즈는 부모따라 결정 */
+    /* grid-template-columns:200px 200px 200px;
+    - 이거랑 같음 */
+    /* grid-template-columns:repeat(3,1fr);
+    - 이거랑도 같음 */
+    /* grid-template-columns:repeat(3,200px);
+    - 이거랑도 같음 */
+    /* grid-template-columns:auto auto auto;
+    - 이거랑도 같음 */
+    gap:20px;
+}

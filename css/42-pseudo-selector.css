@@ -1,0 +1,28 @@
+p{
+    background:paleturquoise;
+}
+
+/* 많이 사용 */
+p::before{
+    content:"before";
+    font-size:40px;
+    color:blue;
+}
+p::after{
+    content:"end";
+    font-size:50px;
+}
+
+div{
+    border:6px solid palegreen;
+}
+
+/* div 안에 첫번째 글자 선택해서 글자크기 */
+div::first-letter{
+    font-size:50px;
+}
+
+/* 첫번째 줄을 선택하여 배경색 */
+div::first-line{
+    background: plum;
+}

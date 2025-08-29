@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+li{
+    list-style:none;
+}
+
+a{
+    text-decoration:none;
+    color:#111;
+}
+
+
+/* header */
+header{
+    background:#fff;
+
+    .inner{
+        max-width:1600px;
+        margin:0 auto;
+
+        .gnb{
+            display:flex;
+            gap:20px;
+            justify-content:flex-end;
+
+            >li{
+                position:relative;
+
+                >a{
+                    font: size 20px;
+                    font-weight:600;
+                    line-height:70px;
+                }
+
+                .user-list{
+                    position:absolute;
+                    background:#fff;
+                    border:1px solid #ccc;
+                    padding:20px;
+                    line-height:2;
+                    border-radius:10px;
+                    top:60px;
+                    left:-20px;
+                }
+            }
+        }
+    }
+}
+
+
+/* main */
+main{
+    background:#555;
+    padding:100px 0;
+}

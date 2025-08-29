@@ -1,0 +1,50 @@
+/* pc */
+body {
+    font-size: 16px;
+    background-color: plum;
+}
+
+.title {
+    font-size: 2em;
+}
+
+
+/* ipad mobile 숨기기 */
+.ipad,
+.mobile {
+    display: none;
+}
+
+/* ipad */
+/* 해상도 768~1279px */
+@media screen and (max-width:1279px) {
+    body {
+        font-size: 14px;
+        background: aqua;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .ipad {
+        display: block;
+    }
+}
+
+/* mobile */
+/* 해상도 ~767px */
+@media screen and (max-width:767px) {
+    body {
+        font-size: 12px;
+        background: palegreen;
+    }
+
+    .ipad{
+        display:none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}

@@ -1,0 +1,19 @@
+/* h1에 배경색 */
+h1{
+    background-color:rgb(172, 243, 219);
+}
+/* .img-box 배경그림 */
+.img-box{
+    line-height:400px;
+    background-image:url(../images/summit_logo_v2.png);
+    background-repeat:no-repeat;
+}
+
+/* 문서 전체에 배경그림 화면가운데 
+스크롤이 이동해도 그 자리에 있도록*/
+body{
+    background-image:url(../images/NT7VR18T-1.jpg);
+    background-repeat:no-repeat;
+    background-position:center 300px;
+    background-attachment:fixed;
+}

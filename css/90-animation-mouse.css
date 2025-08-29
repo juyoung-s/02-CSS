@@ -1,0 +1,86 @@
+header{
+    height:100px;
+    line-height:100px;
+    position:fixed;
+    /* 이거 쓰면 너비 꼭 줘야 함 */
+    width:100%;
+}
+
+.inner{
+    max-width:180px;
+    margin:0 auto;
+}
+
+.logo{
+    width:200px;
+    img{
+        width:100%;
+    }
+}
+
+main{
+    /* 100vh - 높이 기준 100퍼 */
+    height:100vh;
+    background:url(../images/250700_캠핑기획전_메인상단배너_PC.jpg) center center;
+    background-size:cover;
+}
+
+.mouse-wrap{
+    position:absolute;
+    background:pink;
+    bottom:100px;
+    left:50%;
+    /* 마우스랩이 기준이 되어서 자기사이즈의 절반만큼 
+    움직여서 정가운데로 보내기 - 본인의 사이즈에 맞춰서 50퍼 */
+    transform:translateX(-50%);
+    animation:mouseAni 1s alternate infinite linear;
+}
+
+.mouse{
+    width:25px;
+    height:50px;
+    border-radius:50px;
+    border:2px solid #fff;
+    position:relative;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.mouse span{
+    /* 스판은 인리인이니까 */
+    display:block;
+    width:4px;
+    height:8px;
+    border-radius:4px;
+    background:#fff;
+    position:absolute;
+    left:50%;
+    top:10px;
+    transform:translateX(-50%);
+    animation: mouseDot 3s infinite;
+}
+
+@keyframes mouseAni{
+    form{
+        bottom:100px;
+    }
+    to{
+        bottom:50px;
+        opacity:0.3;
+    }
+}
+
+@keyframes mouseDot{
+    0%{
+        top:10px;
+        opacity:0.7;
+    }
+    50%{
+        top:20px;
+        opacity:0.9;
+    }
+    100%{
+        top:50px;
+        opacity:0;
+    }
+}

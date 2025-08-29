@@ -1,0 +1,26 @@
+/* subway */
+/* 메인컬러 초록 #009223
+서브컬러 노랑 #ffce32
+제목 글자크기 40 */
+
+:root{
+    /* --변수명:값 */
+    /* 변수이름 영문자로 쓰는게 좋음
+    한글, 숫자, -,_,대소문자 구분 가능 */
+    --mainColor:#009223;
+    --subColor:#ffce32;
+    --titleSize:40px;
+}
+
+header{
+    border-top:5px solid var(--mainColor);
+}
+
+.logo{
+    color:var(--mainColor);
+}
+
+section>h2{
+    background:var(--subColor);
+    font-size:var(--titleSize);
+}

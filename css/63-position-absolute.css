@@ -1,0 +1,35 @@
+.wrap{
+    width:600px;
+    background:lavender;
+    margin:0 auto;
+    position:relative;
+
+    >div{
+        width:100px;
+        height:100px;
+        border:1px solid gray;
+    }
+
+    /* 모든 자식이 absolute되면
+    부모는 높이값을 잃어버린다
+    높이 찾기-height를 준다 */
+    >.box1{
+        background:deeppink;
+        color:white;
+        position:absolute;
+        left:50px;
+        top:30px;
+    }
+    >.box2{
+        background:deepskyblue;
+        color:white;
+        position:absolute;
+    }
+
+    >.box3{
+        background:greenyellow;
+        color:white;
+        position:absolute;
+        left:20px;
+    }
+}

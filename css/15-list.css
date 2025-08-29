@@ -1,0 +1,17 @@
+/* .list>li를 선택하여
+기본이 검정 동그라미 -> 빈동그라미 */
+.list>li{
+    /* list-style-type:square; */
+    list-style-type:circle;
+}
+/* ol>li를 선택하여
+기본 숫자 -> 로마, 알파벳 등등 */
+ol>li{
+    list-style-type:upper-roman;
+}
+/* .gnb>li */
+.gnb>li{
+    /* list-style-type:square;
+    list-style-position:inside; */
+    list-style:none;
+}

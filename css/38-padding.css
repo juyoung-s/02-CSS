@@ -1,0 +1,46 @@
+/* 사이트 만들 때 얘네 무조건 쓰기 */
+*{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style:none;
+}
+
+div{
+    background:rgb(252, 203, 252);
+    border:2px solid rgb(149, 253, 149);
+}
+/* box1 안쪽여백 위50 왼10 오100 */
+.box1{
+    /* padding-top:50px; */
+    padding-block-start:50px;
+    /* padding-left:10px; */
+    padding-inline-start:10px;
+    padding-right:100px;
+}
+/* .box2 안쪽 사방을 전부 50 */
+.box2{
+    padding:50px;
+}
+/* .box3 안쪽 위아래20 좌우100 */
+.box3{
+    padding:20px 100px;
+}
+/* .box4 위50 좌우20 아래100 */
+.box4{
+    padding:50px 20px 100px;
+}
+/* .box5 위10 오30 아래50 왼70 */
+.box5{
+    padding:10px 30px 50px 70px;
+}
+
+span{
+    /* inline 요소에 위아래 패딩은
+    문제 발생 - 위아래 크기 안 늘어나고 다른 요소와 겹침
+    
+    인라인 margin 위아래 여백이 적용되지 않음*/
+    background:skyblue;
+    padding:50px 100px;
+}

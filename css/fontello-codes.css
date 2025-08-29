@@ -1,0 +1,4 @@
+
+.icon-heart:before { content: '\e800'; } /* '' */
+.icon-star-empty:before { content: '\e801'; } /* '' */
+.icon-cloud:before { content: '\e802'; } /* '' */

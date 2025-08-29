@@ -1,0 +1,47 @@
+/* 공통사항 */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* li장식제거 */
+li{
+    list-style:none;
+}
+
+/* a 밑줄제거, 글자색 #1c1c1c */
+a{
+    text-decoration:none;
+    color:#1c1c1c;
+}
+
+header{
+    background:#eee;
+}
+
+.main-menu>li{
+    display:inline-block;
+    margin:0 30px;
+}
+.main-menu>li>a{
+    display:block;
+    font-size:18px;
+    font-weight:600;
+    padding:30px 0;
+}
+
+/* submenu .depth1 숨기기 */
+.depth1{
+    display:none;
+    position:absolute;
+}
+
+/* 메인메뉴에 마우스가 호버되면 
+.depth1을 보여줘라
+한꺼번에 모든 depth1을 볼때 */
+/* .main-menu:hover .depth1{
+    display:block;
+} */
+
+.main-menu>li:hover .depth1{
+    display:block;
+}
