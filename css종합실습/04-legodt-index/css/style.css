@@ -147,11 +147,95 @@ header {
     gap:2.4rem;
 }
 
+.header-right>ul>li{
+    position:relative;
+    background:skyblue;
+    /* 하늘색 영역이 header-left처럼 서브랑 연결 안되어있어서
+    서브에 hover하면 서브가 사라지는 문제 해결하기 */
+    /* line height 적용하면 기준 달라져서 서브메뉴 위치 바뀜
+    따라서 depth1 위치 top 수정 필요 */
+    line-height:70px;
+}
+
+.header-right>ul>li>a{
+    color:#fff;
+    font-weight:600;
+    font-size:2rem;
+}
+
+.header-right .depth1{
+    display:none;;
+    height:auto;
+    padding:12px 30px 12px 20px;
+    border-radius:10px;
+    border:1px solid #d3d3d3;
+    background:#fff;
+    line-height:2;
+    font-size:1.4rem;
+    top:55px;
+}
+
+.header-right>ul>li:hover .depth1{
+    display:block;
+}
+
+.gnb-icon .cart-count{
+    position:absolute;
+    width:2rem;
+    height:2rem;
+    color:#fff;
+    background:#ef4f11;
+    border-radius:50%;
+    line-height:2rem;
+    font-size:1rem;
+    right:-10px;
+    top:15px;
+    text-align:center;
+}
 
 
 
 
 /* main */
+.main-slider-wrap{}
+
+.main-slider{
+    display:flex;
+    width:calc(100% * 4);
+}
+
+.main-slider>div{
+    display:flex;
+}
+
+.main-slider>div>div{
+    
+}
+
+.main-slider>.slider1{
+    background:#bc0a2c;
+}
+.main-slider>.slider2{
+    background:#e14337;
+}
+.main-slider>.slider3{
+    background:#Fcb8c8;
+}
+.main-slider>.slider4{
+    background:#b3c5ec;
+}
+
+.main-slider>.active
+
+.main-slider-wrap .slider-pager{}
+
+.slider-pager>li{}
+
+.slider-pager>li>a{}
+
+.container{}
+
+
 
 /* footer */
 
