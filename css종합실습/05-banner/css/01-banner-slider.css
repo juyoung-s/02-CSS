@@ -1,0 +1,57 @@
+.inner{
+    max-width:1200px;
+    margin:0 auto;
+    border:1px solid red;
+}
+
+.slider-list-wrap{
+    position:relative;
+    background: skyblue;
+}
+
+.slider-list{
+    display:flex;
+    /* 3번째가 가운데로 오게 하기 */
+    justify-content: center;
+    align-items: center;;
+    gap:20px;
+}
+
+.slider-list>div{
+    /* width:400px; */
+    /* 너비의 비율에 맞춰 높이 맞추기 */
+    /* x너비/y너비 */
+    /* 보통 16:9 많이 씀 */
+    aspect-ratio:16/9;
+    background-color:pink;
+    border:2px solid blue;
+    /* 전체 100%를 기준으로 30%로 크기 */
+    flex: 0 0 30%;
+}
+
+.slider-list>.active{
+    /* 넘길 때 3번째 오는게 항상 커지게 */
+    flex: 0 0 50%;
+}
+
+.arrow-btn{}
+
+.arrow-btn>.left-btn>a{
+    left:0;
+}
+
+.arrow-btn>.right-btn>a{
+    right:0;
+}
+
+.arrow-btn>li>a{
+    display:block;
+    width:50px;
+    height:50px;
+    background:green;
+    /* 빨간색 테두리가 부모 */
+    position:absolute;
+    top:50%;
+    /* 위아래 정가운데로 오게 하기 */
+    transform:translateY(-50%);
+}

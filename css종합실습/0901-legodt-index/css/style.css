@@ -15,58 +15,47 @@ body {
     font-family: "Outfit", "Suit", sans-serif;
     font-size: 1.6rem;
     color: var(--font-base-color);
-    background: #f3f3f3;
 }
 
 .wide-inner {
-    /* 해상도 상관없이 margin 들어있음 */
-    /* inner에도 똑같은 margin이나 padding 주기 - 반응형 때문에 */
     margin: 0 2.5%;
-    /* background: rgba(255, 0, 0, 0.2); */
-    /* 얘를 기준으로 메뉴가 왼쪽 끝에 붙어있도록 */
+    background-color: rgba(255, 0, 0, 0.2);
     position: relative;
 }
 
 .inner {
     max-width: 1680px;
-    padding:0 2.5%;
     margin: 0 auto;
-    /* background: rgba(0, 0, 255, 0.2); */
+    background-color: rgba(0, 0, 255, 0.2);
 }
 
 /* header */
 header {
     background: var(--main-color);
     height: 7rem;
-    /* 아래로 스크롤해도 header 계속 보이도록 */
     position: fixed;
-    /* position:fixed 쓰면 너비가 줄어드므로 사이즈 필요 */
     width: 100%;
-    /* 헤더가 항상 위로 올라오도록 */
-    z-index: 10000;
+    z-index: 1000;
 }
 
+
 .logo {
-    /* 로고 가운데로 보내기 */
+    /* text-align:center; */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 7rem;
-    /* 위에 2개하면 로고가 정확희 위아래 가운데로 감 */
 
-    /* 불필요한 공간없이 로고를 위에 딱 붙이기 */
     img {
         display: block;
     }
 }
 
 .header-left {
-    /* logo영역 위로 올라오게 하기 */
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
-    /* 햄버거 가운데로 */
     align-items: center;
     gap: 3rem;
 }
@@ -75,10 +64,8 @@ header {
     display: flex;
     gap: 2.4rem;
 
-    /* 서브메뉴는 스타일 좀 다르니까
-    a에 얘네 주기 */
     >li {
-        /* background-color: palegreen; */
+        background-color: green;
         position: relative;
 
         >a {
@@ -90,13 +77,12 @@ header {
     }
 }
 
-/* 서브메뉴 배경 만들기 */
 .main-menu::before {
     content: "";
     display: block;
     width: 100%;
-    height: 0;
-    background: var(--main-color);
+    height: 0px;
+    background: purple;
     position: fixed;
     left: 0;
     top: 70px;
@@ -104,42 +90,34 @@ header {
 }
 
 .main-menu:hover::before {
-    /* hover하면 높이가 0이었다가 120으로 늘어남 */
     height: 120px;
 }
 
-/* 서브메뉴를 1개씩 볼 때 */
-/* .main-menu>li:hover .depth1 {
+/* 서브메뉴를 한개씩 볼때 */
+/* .main-menu>li:hover .depth1{
     display: block;
 } */
-
-/* 서브메뉴를 전부 볼 때 */
+/* 서브메뉴를 전부 볼때  */
 .main-menu:hover .depth1 {
-    /* display:block; */
+    /* display: block; */
     height: 120px;
-    color:#fff;
 }
 
-/* 서브메뉴의 배경이 100%인 경우 header fixed일 때 사용할 것 */
+/* 서브메뉴의 배경이 100%인 경우 header fixed일때 사용할것 */
 
 .depth1 {
-    /* 메인메뉴할 때 복잡하니까 depth1 숨겨놓기 */
     /* display: none; */
-    /* background: skyblue; */
-    /* depth1 텍스트길이가 길면 메인메뉴 영역도 늘어나버리므로
-    이걸 막기 위해 */
-    /* 얘의 부모는 메인메뉴의 li */
+    background-color: skyblue;
     position: absolute;
-    /* border: 1px solid black; */
+    /* border:1px solid black; */
     left: 50%;
     transform: translateX(-50%);
-    /* 아래3개: 글씨도 스르륵 나오게하기 */
     height: 0;
     overflow: hidden;
     transition: 0.5s;
 }
 
-/* 팀플 lang-btn에서 필요한거 */
+
 .header-right {
     position: absolute;
     right: 0;
@@ -157,11 +135,7 @@ header {
 
 .header-right>ul>li {
     position: relative;
-    /* background: skyblue; */
-    /* 하늘색 영역이 header-left처럼 서브랑 연결 안되어있어서
-    서브에 hover하면 서브가 사라지는 문제 해결하기 */
-    /* line height 적용하면 기준 달라져서 서브메뉴 위치 바뀜
-    따라서 depth1 위치 top 수정 필요 */
+    background-color: skyblue;
     line-height: 70px;
 }
 
@@ -173,7 +147,6 @@ header {
 
 .header-right .depth1 {
     display: none;
-    ;
     height: auto;
     padding: 12px 30px 12px 20px;
     border-radius: 10px;
@@ -202,12 +175,8 @@ header {
     text-align: center;
 }
 
-
-
-
 /* main */
 .main-slider-wrap {
-    /* 페이저의 부모 */
     position: relative;
 }
 
@@ -218,7 +187,6 @@ header {
 .main-slider>div {
     display: flex;
     width: 100%;
-    /* 배너들이 겹쳐있어야 페이저 만들 수 있음 */
     position: absolute;
     top: 0;
     left: 0;
@@ -226,22 +194,20 @@ header {
     overflow: hidden;
 }
 
-.main-slider>div>div {}
-
 .main-slider>.slider1 {
-    background: #bc0a2c;
+    background: #BC0A2C;
 }
 
 .main-slider>.slider2 {
-    background: #e14337;
+    background: #E14337;
 }
 
 .main-slider>.slider3 {
-    background: #Fcb8c8;
+    background: #FCB8C8;
 }
 
 .main-slider>.slider4 {
-    background: #b3c5ec;
+    background: #B3C5EC;
 }
 
 .main-slider>.active {
@@ -250,7 +216,6 @@ header {
 }
 
 .main-slider>div>div {
-    /* 그림영역과 글자영역 1:1로 비율 맞추기 */
     flex: 1;
 }
 
@@ -261,19 +226,19 @@ header {
 .main-slider>div .text-box {
     text-align: center;
     display: flex;
-    /* 기본은 좌우이지만 방향을 아래로 바꾸면
-    justify-content도 위아래가 됨 */
+    /* 기본은 옆으로 붙는것
+    방향을 아래로 변경하면
+     justify-content는 위아래 위치조절이됨*/
     flex-direction: column;
     justify-content: center;
-    /* shop-now-btn이랑 텍스트 간격 조절 */
-    gap: 50px;
+    gap: 30px;
 }
 
 .main-slider>div .text-box .slider-title {
     font-size: 6rem;
 }
 
-.main-slider>div .text-box .explicaiton {
+.main-slider>div .text-box .explication {
     font-size: 2rem;
     margin-bottom: 30px;
 }
@@ -281,15 +246,15 @@ header {
 .main-slider>div .text-box .shop-now-btn>a {
     display: inline-block;
     background: #fff;
-    padding: 2rem 4rem;
+    padding: 20px 40px;
     border-radius: 50px;
     font-size: 2rem;
     font-weight: 600;
 }
 
+
 .main-slider-wrap .slider-pager {
     position: absolute;
-    /* absolute 주고 위치값 주는건 부모 기준 */
     bottom: 50px;
     right: 0px;
     display: flex;
@@ -307,7 +272,7 @@ header {
     height: 1.6rem;
     border-radius: 20px;
     background: #fff;
-    /* 숫자가 저 멀리 가서 안보이도록 */
+    opacity: 0.7;
     text-indent: -99999px;
 }
 
@@ -316,9 +281,7 @@ header {
     opacity: 1;
 }
 
-.container {
-    margin-top: 16rem;
-}
+.container {}
 
 .container section {
     margin: 0 0 16rem;
@@ -346,55 +309,52 @@ header {
 }
 
 .category-list>div .img-box {
-    border-radius: 24px;
+    border-radius: 2.4rem;
     overflow: hidden;
 }
 
 .category-list>div .img-box img {
     width: 100%;
-}
-
-.category-list>div:hover .img-box img {
-    opacity: 0.8;
-    transform: scale(1.1);
     transition: 0.3s;
 }
 
+.category-list>div:hover .img-box img {
+    opacity: 0.6;
+    transform: scale(1.2);
+}
+
 .make-your-wrap {
-    /* background: #9a9a9a; */
+    background: #9a9a9a;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
     position: relative;
+    text-align: center;
 }
 
 .make-your-wrap .make-your {
-    /* 햄버거 누르면 나오는 메뉴 만들려고 relative */
-    position:relative;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#76dd2c+0,e495f9+50,42ebf4+100 */
-    background: linear-gradient(to right, rgba(118, 221, 44, 1) 0%, rgba(228, 149, 249, 1) 50%, rgba(66, 235, 244, 1) 100%);
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a500ff+0,78af01+59,7db9e8+100 */
+    background: linear-gradient(135deg, #a500ff 0%, #7db9e8 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
 }
 
 .make-your-wrap .make-your .text-box {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* x,y축 모두 50%씩 움직이도록 */
     transform: translate(-50%, -50%);
-    /* 모든 자식이 흰색 */
     color: #fff;
 }
 
-.make-your-wrap .text-box {
-    /* display:flex;
-    flex-direction:column;
+.make-your .text-box {
+    /* display: flex;
+    flex-direction: column;
     align-items: center;
     gap:20px; */
 }
 
-.make-your-wrap .text-box .slider-title {
+.make-your .text-box .slider-title {
     font-size: 6rem;
     margin: 20px 0 50px;
     text-shadow: 10px 20px 20px rgba(0, 0, 0, 0.3);
@@ -403,33 +363,35 @@ header {
 
 .make-your .text-box .lets-btn {
     background: var(--font-base-color);
-    font-size: 2rem;
-    padding: 2rem 3.6rem;
+    padding: 20px 36px;
     border-radius: 5rem;
-    /* 버튼 너비 줄이기 */
     display: inline-block;
     margin-top: 20px;
+    font-size: 2rem;
 }
 
-
-
-
-/* loved-by */
+/* loved -by */
 .loved-by-wrap {}
 
-.loved-by-wrap>div>div .num {
-    font-size: 6.4rem;
-    font-weight: 700;
-    position: absolute;
-    z-index: 999;
-    top: 0;
-    left: 2.4rem;
-    transform: translateY(-50%);
+.loved-by-wrap>div>div .num{
+    font-size:6.4rem;
+    font-weight:700;
+    position:aboslute;
+    z-index:999;
+    top:0;
+    left:2.4rem;
+    transform:translateY(-50%);
 }
 
-.loved-by-wrap>div>.loved-by-list-top .num {
-    color: var(--main-color);
+.loved-by-wrap>div>.loved-by-list-top .num{
+    color:var(--main-color);
 }
+
+.loved-by-list-top .loved,
+.loved-by-list-bottom .loved{
+    position:relative;
+}
+
 
 .loved-by-list-top,
 .loved-by-list-bottom {
@@ -437,15 +399,9 @@ header {
     gap: 4rem;
 }
 
-.loved-by-list-top .loved,
-.loved-by-list-bottom .loved {
-    position: relative;
-    margin-bottom: 4rem;
-}
 
-/* .loved 들이랑 공통사항 */
 .loved .text-box {
-    padding: 3rem 2rem;
+    padding:3rem 2rem;
 }
 
 .loved .text-box .price-wrap {
@@ -461,15 +417,14 @@ header {
 }
 
 .loved .text-box .sale {
-    color: var(--main-color);
     font-weight: 600;
+    color: var(--main-color);
 }
 
-.loved .text-box .price-wrap span {
+.loved .text-box .price span {
     color: #9a9a9a;
     text-decoration: line-through;
 }
-
 
 /* new-in */
 .new-in-wrap {
@@ -480,24 +435,11 @@ header {
     position: relative;
 }
 
-/* shop-now-btn을 텍스트 길이에 맞추기 */
-/* .new-in-wrap .new-in { 
-    display: flex;
-} */
-
 .new-in-wrap .section-title {
     color: #01a799;
-    text-align: left;
-    margin-bottom: 1rem;
 }
 
-.new-in-wrap .section-sub-title {
-    font-size: 3.6rem;
-    font-weight: 800;
-
-}
-
-.new-in-wrap .sub-title {
+.new-in-wrap  .sub-title {
     font-size: 3.6rem;
     font-weight: 800;
 }
@@ -529,24 +471,23 @@ header {
 }
 
 .new-in-wrap .shop-now-btn>a {
-    display: inline-block;
+    display: block;
     border: 1px solid #fff;
     border-radius: 50px;
     text-align: center;
-    padding: 1.6rem 5rem;
+    padding: 1.6rem 0;
     margin: 50px 0 0;
 }
 
-/* .new-in-wrap .shop-now-btn>a p {
-    border:1px solid black;
+.new-in-wrap .shop-now-btn>a p {
+    /* border:1px solid black; */
     overflow: hidden;
-} */
+}
 
 .new-in-wrap .shop-now-btn>a span {
     position: relative;
     display: inline-block;
     transition: 0.3s;
-    overflow: hidden;
 }
 
 .new-in-wrap .shop-now-btn>a span::after {
@@ -568,16 +509,13 @@ header {
 }
 
 .arrow-list>li>a {
-    background: #fff;
+    background: #555;
     display: flex;
-    padding: 8px 30px;
+    padding: 10px 24px;
     border-radius: 50px;
 }
 
 .arrow-list>li>a img {
-    /* 아이콘 너무 크면 줄이기 */
-    width: 40px;
-    height: 38px;
     transition: 0.3s;
 }
 
@@ -591,7 +529,7 @@ header {
 
 
 
-/* summer sorted wrap */
+/* summer */
 .summer-sorted-wrap {}
 
 .tab-menu-list {
@@ -608,7 +546,6 @@ header {
     position: relative;
 }
 
-/* 팀플 참고 */
 .tab-menu-list>.active::after {
     content: "";
     display: block;
@@ -631,14 +568,13 @@ header {
 
 /* .sunshade-list .img-box,
 .loved-by-list-top .img-box,
-.love-by-list-bottom .img-box {
+.loved-by-list-bottom .img-box {
     position: relative;
     border-radius: 3rem;
     overflow: hidden;
     background: #fff;
 } */
 
-/* 위를 더 간단히 */
 .loved .img-box {
     position: relative;
     border-radius: 3rem;
@@ -646,7 +582,16 @@ header {
     background: #fff;
 }
 
-/* 같은 내용이면 선택자만 추가 */
+/* .sunshade-list .img-box .hover-img,
+.loved-by-list-top .img-box .hover-img,
+.loved-by-list-bottom .img-box .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+} */
+
 .loved .img-box .hover-img {
     position: absolute;
     top: 0;
@@ -655,26 +600,24 @@ header {
     transition: 0.3s;
 }
 
-
-.loved .img-box:hover .hover-img {
+.loved .img-box:hover .hover-img{
     opacity: 1;
 }
 
-/* 하트는 안 들어가는 곳도 있으니까 이렇게 나열 */
 .loved-by-wrap .img-box .heart-icon>a,
 .sunshade-list .img-box .heart-icon>a {
     position: absolute;
     display: block;
     width: 32px;
     height: 32px;
-    background: url(../images/heart-gray.png);
+    background-image: url(../images/heart-gray.png);
     top: 4rem;
     right: 3rem;
 }
 
 .loved-by-wrap .img-box .heart-icon.active>a,
 .sunshade-list .img-box .heart-icon.active>a {
-    background: url(../images/heart-pink.png);
+    background-image: url(../images/heart-pink.png);
 }
 
 .sunshade-list .text-box {
@@ -682,14 +625,7 @@ header {
     font-size: 1.8rem;
 }
 
-.sunshade-list .text-box>p {
-    font-weight: 700;
-}
-
-
-
-
-.cataglogue-wrap {}
+.catalogue-wrap {}
 
 .catalogue-list {
     display: flex;
@@ -705,14 +641,13 @@ header {
 }
 
 .catalogue-list>div .big-img>img {
-    /* width:100%; */
+    /* width: 100%; */
 }
 
 .catalogue-list>div .big-img>.more-plus-btn {
     position: absolute;
 }
 
-/* 그냥 p에 이름 주는게 더 쉬움 */
 .catalogue-list>.cata1 .big-img>.more-plus-btn:first-of-type {
     top: 200px;
     left: 50px;
@@ -736,78 +671,13 @@ header {
     background: #fff;
 }
 
-.thumb-img>.text-box {}
-
-.thumb-img>.text-box .price {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.thumb-img>.text-box .price .sale {
-    font-weight: 600;
-    color: var(--main-color);
-}
-
-.thumb-img>.text-box .price span {
-    color: #9a9a9a;
-    text-decoration: line-through;
-}
-
-
 
 
 /* footer */
-footer {
-    background-color: #b59274;
-    padding: 50px 0;
-    color: white;
-}
-
-.footer-top,
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    gap: 200px;
-}
-
-.footer-top .company-info h2 {
-    font-size: 1rem;
-}
-
-.footer-top .company-info address {
-    font-size: 12px;
-    margin: 20px 0 0;
-    line-height: 1.8;
-}
-
-.company-info address span {
-    margin-right: 20px;
-}
-
-.footer-menu {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    column-gap: 100px;
-}
 
 
-.footer-menu>li {
-    width: 30%;
-}
 
-.footer-bottom {
-    margin-top: 100px;
-}
 
-.sns-list {
-    display: flex;
-    align-items: center;
-}
+/* ipad */
 
-.sns-list>li {}
-
-.sns-list>.es-mark img {
-    height: 32px;
-}
+/* mobile */

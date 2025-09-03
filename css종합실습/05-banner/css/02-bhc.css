@@ -1,0 +1,27 @@
+.insta-wrap{
+    display:flex;
+}
+
+.insta-wrap>div{
+    flex:1;
+}
+
+.insta-wrap>.insta-left{
+    background:pink;
+}
+
+.insta-wrap .insta-list{
+    display:flex;
+    /* 5번째가 보이도록 */
+    justify-content:flex-end;
+    gap:20px;
+}
+
+.insta-wrap .insta-list>div{
+    border:1px solid black;
+    border-radius:20px;
+    flex:0 0 45%;
+    /* 너비 365 높이 507 */
+    /* 365/12 507/22 */
+    aspect-ratio:16/22;
+}

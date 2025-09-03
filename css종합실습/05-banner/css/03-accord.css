@@ -1,0 +1,32 @@
+.accord-wrap{
+    max-width:1200px;
+    margin: 0 auto;
+    border:1px solid red;
+}
+
+.accord-list{
+    display:flex;
+    gap:10px;
+}
+
+.accord-list>div{
+    width:30%;
+    height:500px;
+    border:1px solid blue;
+    overflow:hidden;
+    position:relative;
+    border-radius:20px;
+}
+
+.accord-list>.active{
+    width:65%;
+}
+
+/* 그림크기 줄이기 */
+.accord-list>div img{
+    width:800px;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    max-width:none;
+}
